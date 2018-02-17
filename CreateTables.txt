@@ -1,0 +1,43 @@
+CREATE TABLE IF NOT EXISTS users (
+	username TEXT PRIMARY KEY NOT NULL,
+	password TEXT NOT NULL,
+	email TEXT NOT NULL,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+	gender TEXT,
+	person_id INTEGER NOT NULL
+
+  );
+
+CREATE TABLE IF NOT EXISTS authorization_tokens (
+	tokΩzΩΩΩen TEXT NOT NULL,
+	username TEXT NOT NULL
+
+);
+
+
+CREATE TABLE IF NOT EXISTS persons (
+	person_id TEXT PRIMARY KEY NOT NULL, 
+	descendent TEXT,
+	first_name TEXT NOT NULL,
+	last_name TEXT NOT NULL,
+ 	gender TEXT,
+	father TEXT,
+	mother TEXT,
+	spouse TEXT
+  );
+
+
+CREATE TABLE IF NOT EXISTS events (
+	event_id TEXT PRIMARY KEY NOT NULL,
+	descendant TEXT,
+	person INTEGER,
+	latitude INTEGER,
+	longitude INTEGER,
+	country TEXT,
+	city TEXT,
+	event_type TEXT,
+	year INTEGER
+  );
+
+
